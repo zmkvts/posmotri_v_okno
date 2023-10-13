@@ -64,7 +64,7 @@ white-space: nowrap;
 
 .title {
   margin-bottom: 26px;
-  color: #FFF;
+  color: #fff;
   font-family: Oswald;
 font-size: 75px;
 font-style: normal;
@@ -101,7 +101,7 @@ text-transform: uppercase;
 }
 
 .content__video-card-title {
-  color: #FFF;
+  color: #fff;
 font-family: Oswald;
 font-size: 30px;
 font-style: normal;
@@ -113,7 +113,7 @@ padding-left: 2px;
 }
 
 .content__video-card-description {
-  color: #FFF;
+  color: #fff;
   font-family: 'Fira Sans Condensed';
   font-size: 18px;
   font-style: normal;
@@ -141,7 +141,7 @@ padding-left: 2px;
 }
 
 .search-form__fieldset-title {
-  color: #FFF;
+  color: #fff;
 font-family: 'Fira Sans Condensed';
 font-size: 18px;
 font-style: normal;
@@ -158,18 +158,43 @@ font-style: normal;
 font-weight: 400;
 line-height: normal;
 background-color: #1B1919;
-border-top: 1px solid #FFF;
-border-bottom: 1px solid #FFF;
+border-top: 1px solid #fff;
+border-bottom: 1px solid #fff;
 min-width: 225px;
 width: fit-content;
-cursor: pointer;
 appearance: none;
   padding-block: 0px;
   padding-inline: 0px;
 }
 
+.search-form__textfield:focus {
+  outline: none;
+}
+
+.search-form__textfield:active {
+  border: 1px solid #fff;
+}
+
+.search-form__label {
+  display: flex;
+  min-height: 27px;
+}
+
+.search-form__label:focus {
+  outline: none;
+}
+
+.search-form__label:has(:focus-visible) {
+  border: 1px solid #1B1919;
+  box-shadow: 0 0 0 1px #fff;
+}
+
+.search-form__label:last-child:hover {
+  text-decoration: underline;
+}
+
 .search-form__label-text {
-  color: #FFF;
+  color: #fff;
 font-family: 'Fira Sans Condensed';
 font-size: 18px;
 font-style: normal;
@@ -183,21 +208,35 @@ line-height: normal;
   gap: 17px;
 }
 
-.search-form__label {
-  display: flex;
-}
-
 .search-form__pseudo-checkbox {
   display: flex;
-  width: 18px;
-  height: 18px;
+  width: 19px;
+  height: 19px;
   border: 1px solid #fff;
   margin-right: 5px;
+  background-color: #1B1919 ;
+  cursor: pointer;
+}
+
+.search-form__checkbox:checked + .search-form__pseudo-checkbox {
+  display: flex;
+  width: 17px;
+  height: 17px;
+  margin-left: 1px;
+  margin-top: 1px;
+  margin-right: 6px;
+  background-color: #fff ;
+  border: 1px solid #1B1919;
+  box-shadow: 0 0 0 1px #fff;
+}
+
+.search-form__checkbox:focus-visible + .search-form__pseudo-checkbox {
+  border: 1px solid #fff;
 }
 
 .button {
   cursor: pointer;
-  color: #FFF;
+  color: #fff;
 text-align: center;
 font-family: 'Fira Sans Condensed';
 font-size: 18px;
@@ -206,6 +245,22 @@ font-weight: 700;
 line-height: normal;
 background-color: #1B1919;
 border: 1px solid #fff;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:hover {
+  text-decoration: underline;
+}
+
+.button:active {
+  background-color: #545050;
+}
+
+.button:has(:focus-visible) {
+  outline: 1px solid #fff;
 }
 
 .search-form__submit-button {
