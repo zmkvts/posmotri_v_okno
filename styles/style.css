@@ -15,7 +15,7 @@ html {
   color: #fff;
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
-  background-color: #887878; /*#1b1919*/
+  background-color: #1b1919; /*#887878*/1b1919
 }
 
 h1,
@@ -81,19 +81,25 @@ text-transform: uppercase;
   max-height: 298px;
   overflow-y: scroll;
   position: relative;
+  width: 100%;
 }
 
 .content__list-item {
+  width: 100%;
   padding-bottom: 30px;
 }
 
 .content__video-card {
   display: flex;
   justify-content: space-between;
+  height: 103px;
+  position: relative;
 }
 
 .content__card-link {
   text-decoration: none;
+  max-width: 394px;
+  height: 107px;
 }
 
 .content__card-link_current {
@@ -109,7 +115,6 @@ font-weight: 700;
 line-height: 100%; /* 30px */
 text-transform: uppercase;
 padding-bottom: 6px;
-padding-left: 2px;
 }
 
 .content__video-card-description {
@@ -119,13 +124,15 @@ padding-left: 2px;
   font-style: normal;
   font-weight: 400;
   line-height: 90%; /* 16.2px */
-  padding-left: 2px;
 }
 
 .content__video-card-thumbnail {
   width: 194px;
   height: 103px;
   background-size: cover;
+  position: relative;
+  top: 2px;
+  right: -2px;
 }
 
 .search-form {
@@ -160,6 +167,7 @@ line-height: normal;
 background-color: #1B1919;
 border-top: 1px solid #fff;
 border-bottom: 1px solid #fff;
+border-right: none;
 min-width: 225px;
 width: fit-content;
 appearance: none;
@@ -173,6 +181,8 @@ appearance: none;
 
 .search-form__textfield:active {
   border: 1px solid #fff;
+  outline: none;
+  box-shadow: none;
 }
 
 .search-form__label {
@@ -182,6 +192,7 @@ appearance: none;
 
 .search-form__label:focus {
   outline: none;
+  border: none;
 }
 
 .search-form__label:has(:focus-visible) {
@@ -189,7 +200,7 @@ appearance: none;
   box-shadow: 0 0 0 1px #fff;
 }
 
-.search-form__label:last-child:hover {
+.search-form__label:hover .search-form__label-text {
   text-decoration: underline;
 }
 
@@ -259,8 +270,9 @@ border: 1px solid #fff;
   background-color: #545050;
 }
 
-.button:has(:focus-visible) {
-  outline: 1px solid #fff;
+.button:focus-visible {
+  border: 3px solid #fff;
+  border-style: double;
 }
 
 .search-form__submit-button {
@@ -275,15 +287,46 @@ border: 1px solid #fff;
   height: 34px;
 }
 
+.result {
+  margin-top: 78px;
+}
+
 .result__video-container {
   display: flex;
   margin-bottom: 16px;
   height: 386px;
-  width: 100%;
+  width: 711px;
   position: relative;
 }
 
 .result__video {
   width: 100%;
   height: 100%;
+}
+
+.content__card-link {
+  display: block;
+  margin: 2px;
+
+}
+
+.content__card-link_current {
+  background-color: #545050;
+}
+
+.content__card-link:focus {
+  outline: none;
+}
+
+.content__card-link:hover {
+  outline: none;
+}
+
+.content__card-link:focus-visible {
+  outline: 1px solid #fff;
+}
+
+.content__card-link:hover {
+  text-decoration: underline;
+  text-decoration-color: #fff;
 }
