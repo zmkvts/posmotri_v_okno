@@ -8,6 +8,10 @@ html {
   block-size: 100%;
 }
 
+/* Алексей, привет! Я конечно, чуть с ума не сошел, пока пытался понять,
+ как появляется горизонтальный скролл, выяснилось, что это эпол меня газлайтит и на уровне операционки
+ скрывает скролл, если он не очень большой) в любом случае спасибо за въедливый контроль)*/
+
 .page {
   inline-size: 1200px;
   block-size: 100%;
@@ -53,17 +57,18 @@ ol {
 
 .content {
   display: grid;
-  grid-template-columns: 711px 399px;
+  grid-template-columns: 711px 414px;
   grid-template-rows: 534px;
   gap: 30px;
   padding: 133px 30px;
   align-items: end;
-  justify-content: center;
+  justify-content: start;
 }
 
 .content__details {
   width: 100%;
   height: 100%;
+  margin-left: 7px;
 }
 
 .title {
@@ -333,6 +338,7 @@ ol {
 
 .result {
   margin-top: 78px;
+  margin-left: 8px;
 }
 
 .result__video-container {
